@@ -1,5 +1,7 @@
-import fastify from "fastify";
-import { env } from "./env";
+import fastify from 'fastify';
+import { env } from './env';
+import { mealsRoutes } from './routes/meals';
+import cookie from '@fastify/cookie';
 
 export const app = fastify();
 
@@ -9,3 +11,7 @@ app.get('/', (request, reply) => {
         date: new Date()
     });
 });
+
+app.register(cookie);
+
+app.register(mealsRoutes);
