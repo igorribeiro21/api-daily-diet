@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "dotenv": "^16.3.1",
     "fastify": "^4.25.2",
     "knex": "^3.1.0",
+    "pg": "^8.11.3",
     "sqlite3": "^5.1.7-rc.0",
     "typescript": "^5.3.3",
     "zod": "^3.22.4"
@@ -24,6 +26,7 @@
     "@types/node": "^20.10.6",
     "@types/supertest": "^6.0.2",
     "supertest": "^6.3.3",
+    "tsup": "^8.0.1",
     "tsx": "^4.7.0",
     "vitest": "^1.1.2"
   }
